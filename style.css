@@ -5,7 +5,8 @@
   body {
     background-color: #008080  ;
     font-family: sans-serif;
-    color: white;
+    color: black;
+    padding-left: 20px;
   }
   
   
@@ -71,3 +72,23 @@
   .card:hover{
     background-color:#FF9800 ; 
   }
+
+  /* Styling the movie title */
+.movie-title {
+  font-size: 1.5em;            /* Adjust the font size */
+  font-weight: bold;           /* Make the title bold */
+  color: #333;                 /* Set the title color */
+  margin-bottom: 10px;         /* Space between title and link */
+  text-transform: uppercase;   /* Optional: Make the title uppercase */
+}
+
+/* Styling the reviews link */
+.reviews-link {
+  color: #007bff;              /* Set the link color */
+  text-decoration: none;       /* Remove the underline */
+  font-size: 1.1em;            /* Adjust the font size */
+}
+
+.reviews-link:hover {
+  text-decoration: underline;  /* Underline on hover */
+}

@@ -39,8 +39,13 @@ function returnMovies(url)
 
             const center = document.createElement('center');
             //title will be changed to the respective movies title and image source will also be changed.
-            title.innerHTML = `${element.title}<br><a href="movie.html?id=${element.id}&title=${element.title}">reviews</a>`;
+            // title.innerHTML = `${element.title}<br><a href="movie.html?id=${element.id}&title=${element.title}">reviews</a>`;
+            title.innerHTML = `
+            <h3 class="movie-title">${element.title}</h3>
+            <a href="movie.html?id=${element.id}&title=${element.title}" class="reviews-link">Reviews</a>`;
+
             image.src = IMG_PATH + element.poster_path;
+            
             //Since the image tag is inside the center tage we append it inside the image tag. Same logic for rest
             center.appendChild(image);
             div_card.appendChild(center);

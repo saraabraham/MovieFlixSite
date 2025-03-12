@@ -1,4 +1,5 @@
 import ReviewsDAO from "../dao/reviewsDAO.js"
+import { ObjectId } from "mongodb";
 
 export default class ReviewsController {
     static async apiPostReview(req, res, next) {
@@ -62,9 +63,10 @@ export default class ReviewsController {
       }
     
       static async apiDeleteReview(req, res, next) {
+        let reviewId;
         try {
           // Extract reviewId from request parameters
-          const reviewId = req.params.id;
+          reviewId = req.params.id;
   
           // Log the incoming request
           console.log("Received DELETE request for reviewId:", reviewId);
